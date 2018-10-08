@@ -1,0 +1,10 @@
+C:\Projects\IncomeCalculator\IncomeCalculator\bin\Debug\IncomeCalculator.exe.config
+C:\Projects\IncomeCalculator\IncomeCalculator\bin\Debug\IncomeCalculator.exe
+C:\Projects\IncomeCalculator\IncomeCalculator\bin\Debug\IncomeCalculator.pdb
+C:\Projects\IncomeCalculator\IncomeCalculator\obj\Debug\IncomeCalculator.csprojAssemblyReference.cache
+C:\Projects\IncomeCalculator\IncomeCalculator\obj\Debug\IncomeCalculator.Properties.Resources.resources
+C:\Projects\IncomeCalculator\IncomeCalculator\obj\Debug\IncomeCalculator.csproj.GenerateResource.cache
+C:\Projects\IncomeCalculator\IncomeCalculator\obj\Debug\IncomeCalculator.csproj.CoreCompileInputs.cache
+C:\Projects\IncomeCalculator\IncomeCalculator\obj\Debug\IncomeCalculator.exe
+C:\Projects\IncomeCalculator\IncomeCalculator\obj\Debug\IncomeCalculator.pdb
+C:\Projects\IncomeCalculator\IncomeCalculator\obj\Debug\IncomeCalculator.Form1.resources
