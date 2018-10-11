@@ -12,9 +12,18 @@ namespace IncomeCalculator
 {
     public partial class Form1 : Form
     {
-        public Form1()
+        private RateValidator _validator;
+        private IncomeCalculateService _incomeCalculateService;
+
+        public Form1(
+            RateValidator RateValidator,
+            IncomeCalculateService IncomeCalculateService
+            )
         {
             InitializeComponent();
+            this._validator = RateValidator;
+            this._incomeCalculateService = IncomeCalculateService;
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -36,27 +45,25 @@ namespace IncomeCalculator
         {
             string RatePerHourString = this.RateTextBox.Text;
 
-            // need a validation that it is only number
+            // validate the rate
+           bool IsValid = this._validator.ValidateRate(RatePerHourString);
 
-            int RatePerHour = Int32.Parse(RatePerHourString);
+            if (IsValid)
+            {
+               decimal RatePerHour = decimal.Parse(RatePerHourString);
 
-            // To-Do: move this to new class and new method that takes hours and rate
+                
 
-            // make user able to pass the hours worked
-            int WeeklyIncome = RatePerHour * 40;
+                // get the annual income after comission
+                decimal _annulaIncome = this._incomeCalculateService.IncomeAfterCommisionPaid(RatePerHour);
+                     
 
-            // multiply rate per hour with 40 hours and 4 weeks. 
-            // Cannot be accurate as months can have 3 weeks and some days
-            // try to find a way to get from calender
-            int MonthlyIncome = RatePerHour * 40 * 4;
-
-            int BiWeeklyIncome = RatePerHour * 80;
-
-            int ConsultancyGets = (BiWeeklyIncome * Rates.ConsultancyRate) / 100;
-
-            int ConsultantGets = (BiWeeklyIncome * Rates.ConsultantRate) / 100;
-
-            this.DisplayValue.Text = $"The Consultant Gets {ConsultantGets}";
+                this.DisplayValue.Text = $"I will get {_annulaIncome}";
+            }
+            else
+            {
+                this.DisplayValue.Text = $"Please enter numbers only";
+            }
         }
     }
 }
