@@ -31,7 +31,8 @@
             this.RateTextBox = new System.Windows.Forms.RichTextBox();
             this.RateLabel = new System.Windows.Forms.Label();
             this.Calculate = new System.Windows.Forms.Button();
-            this.DisplayValue = new System.Windows.Forms.Label();
+            this.IncomeBeforeTaxLabel = new System.Windows.Forms.Label();
+            this.IncomeAfterTaxLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // RateTextBox
@@ -63,17 +64,27 @@
             // 
             // DisplayValue
             // 
-            this.DisplayValue.Location = new System.Drawing.Point(132, 281);
-            this.DisplayValue.Name = "DisplayValue";
-            this.DisplayValue.Size = new System.Drawing.Size(529, 41);
-            this.DisplayValue.TabIndex = 3;
+            this.IncomeBeforeTaxLabel.Location = new System.Drawing.Point(132, 281);
+            this.IncomeBeforeTaxLabel.Name = "DisplayValue";
+            this.IncomeBeforeTaxLabel.Size = new System.Drawing.Size(529, 41);
+            this.IncomeBeforeTaxLabel.TabIndex = 3;
+            // 
+            // label1
+            // 
+            this.IncomeAfterTaxLabel.AutoSize = false;
+            this.IncomeAfterTaxLabel.Location = new System.Drawing.Point(494, 360);
+            this.IncomeAfterTaxLabel.Name = "IncomeAfterTaxLabel";
+            this.IncomeAfterTaxLabel.Size = new System.Drawing.Size(51, 20);
+            this.IncomeAfterTaxLabel.TabIndex = 4;
+            this.IncomeAfterTaxLabel.Text = "IncomeAfterTaxLabel";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.DisplayValue);
+            this.Controls.Add(this.IncomeAfterTaxLabel);
+            this.Controls.Add(this.IncomeBeforeTaxLabel);
             this.Controls.Add(this.Calculate);
             this.Controls.Add(this.RateLabel);
             this.Controls.Add(this.RateTextBox);
@@ -81,6 +92,7 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -89,7 +101,8 @@
         private System.Windows.Forms.RichTextBox RateTextBox;
         private System.Windows.Forms.Label RateLabel;
         private System.Windows.Forms.Button Calculate;
-        private System.Windows.Forms.Label DisplayValue;
+        private System.Windows.Forms.Label IncomeBeforeTaxLabel;
+        private System.Windows.Forms.Label IncomeAfterTaxLabel;
     }
 }
 
