@@ -7,3 +7,4 @@ C:\Projects\IncomeCalculator\IncomeCalculator\obj\Debug\IncomeCalculator.csproj.
 C:\Projects\IncomeCalculator\IncomeCalculator\obj\Debug\IncomeCalculator.exe
 C:\Projects\IncomeCalculator\IncomeCalculator\obj\Debug\IncomeCalculator.pdb
 C:\Projects\IncomeCalculator\IncomeCalculator\obj\Debug\IncomeCalculator.Form1.resources
+C:\Projects\IncomeCalculator\IncomeCalculator\obj\Debug\IncomeCalculator.csprojAssemblyReference.cache

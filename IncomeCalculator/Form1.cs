@@ -50,19 +50,21 @@ namespace IncomeCalculator
 
             if (IsValid)
             {
-               decimal RatePerHour = decimal.Parse(RatePerHourString);
+                double RatePerHour = double.Parse(RatePerHourString);
 
-                
+
 
                 // get the annual income after comission
-                decimal _annulaIncome = this._incomeCalculateService.IncomeAfterCommisionPaid(RatePerHour);
-                     
+                double _annulaIncome = this._incomeCalculateService.IncomeAfterCommisionPaid(RatePerHour);
 
-                this.DisplayValue.Text = $"I will get {_annulaIncome}";
+                double _incomeAfterTax = this._incomeCalculateService.IncomeAfterFederalTax(_annulaIncome);
+
+                this.IncomeBeforeTaxLabel.Text = $"I will get before Tax{_annulaIncome}";
+                this.IncomeAfterTaxLabel.Text = $"I will get after Tax {_incomeAfterTax}";
             }
             else
             {
-                this.DisplayValue.Text = $"Please enter numbers only";
+                this.IncomeBeforeTaxLabel.Text = $"Please enter numbers only";
             }
         }
     }
